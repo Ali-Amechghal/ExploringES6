@@ -17,5 +17,15 @@ const HTML_DIV=`<div>
 
 // Third, template literals are “raw” if you prefix them with the tag String.raw 
 // – the backslash is not a special character and escapes such as \n are not interpreted:
-const str = String.raw`Not a newline: \n`;
-console.log(str === 'Not a newline: \\n'); // true
+const str_const = String.raw`Not a newline: \n`;
+console.log(str_const === 'Not a newline: \\n'); // true
+
+//create array from string , by splitting it
+let str = 'JAVASCRIPT';
+let str_array=[...str]; // equivalent to str.split('')
+console.log(str_array); //[ 'J', 'A', 'V', 'A', 'S', 'C', 'R', 'I', 'P', 'T' ]
+
+//loop through a string
+for (char of str){
+	console.log(char);
+}
