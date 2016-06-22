@@ -3,7 +3,7 @@
 'javascript'.startsWith('java'); //true
 'javascript'.endsWith('script'); //true
 'javascript'.includes('asc'); //true
-
+'javascript'.includes('asc',6); //false  , starting from a given position
 //literal tempalte
 
 const first_name='Ali';
