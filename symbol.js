@@ -49,3 +49,21 @@ function getComplement(color) {
             throw new Exception('Unknown color: '+color);
     }
 }
+
+//parsing JSON
+
+const REGEX_SYMBOL_STRING = /^@@(.*)@@$/;
+function symbolReviver(key, value) {
+    if (typeof value === 'string') {
+        const match = REGEX_SYMBOL_STRING.exec(value);
+        if (match) {
+            const symbolKey = match[1];
+            return Symbol.for(symbolKey);
+        }
+    }
+    return value;
+}
+
+const parsed = JSON.parse(str, symbolReviver);
+console.log(parse);
+
