@@ -57,3 +57,28 @@ function html(templateObject, ...substs) {
 
     return result;
 }
+
+const INTEGER = /\d+/;
+const decimalPoint = '.'; // locale-specific! E.g. ',' in Germany
+const NUMBER = regex`${INTEGER}(${decimalPoint}${INTEGER})?`;
+regex looks like this:
+
+function regex(tmplObj, ...substs) {
+    // Static text: verbatim
+    let regexText = tmplObj.raw[0];
+    for ([i, subst] of substs.entries()) {
+        if (subst instanceof RegExp) {
+            // Dynamic regular expressions: verbatim
+            regexText += String(subst);
+        } else {
+            // Other dynamic data: escaped
+            regexText += quoteText(String(subst));
+        }
+        // Static text: verbatim
+        regexText += tmplObj.raw[i+1];
+    }
+    return new RegExp(regexText);
+}
+function quoteText(text) {
+    return text.replace(/[\\^$.*+?()[\]{}|=!<>:-]/g, '\\$&');
+}
