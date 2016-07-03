@@ -1,3 +1,8 @@
-Repository with collection of ECMAScript 6 new features
+# ${1:Exploring ES6}
+Collection of Examples extracted from the book ExploringES6
+## Installation
 
-(c) Ali Amechghal
+## Usage
+
+## License
+(c) MIT
