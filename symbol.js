@@ -1,5 +1,6 @@
 //Symbols are a new primitive type in ECMAScript 6.
 const iterableObject = {
+    // foxinalty nt upote b l bowsr
     [Symbol.iterator]() { // (A)
         const data = ['hello', 'world'];
         let index = 0;
