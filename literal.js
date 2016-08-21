@@ -13,13 +13,11 @@ const data = [
 console.log(tmpl(data));
 // Output:
 // <table>
-//
 //     <tr><td>&lt;Jane&gt;</td></tr>
 //     <tr><td>Bond</td></tr>
 //
 //     <tr><td>Lars</td></tr>
 //     <tr><td>&lt;Croft&gt;</td></tr>
-//
 // </table>
 
 function html(templateObject, ...substs) {
@@ -33,7 +31,6 @@ function html(templateObject, ...substs) {
         // Retrieve the template string preceding
         // the current substitution
         let lit = raw[i];
-
         // In the example, map() returns an Array:
         // If substitution is an Array (and not a string),
         // we turn it into a string
