@@ -31,7 +31,7 @@ const COLOR_YELLOW = Symbol('Yellow');
 const COLOR_GREEN  = Symbol('Green');
 const COLOR_BLUE   = Symbol('Blue');
 const COLOR_VIOLET = Symbol('Violet');
-
+//get clr componeñt by coĺor stŕiñg
 function getComplement(color) {
     switch (color) {
         case COLOR_RED:
