@@ -4,7 +4,7 @@ function func() {
     }
     console.log(tmp); // ReferenceError: tmp is not defined
 }
-In contrast, var-declared variables are function-scoped:
+//In contrast, var-declared variables are function-scoped:
 
 function func() {
     if (true) {
@@ -12,7 +12,7 @@ function func() {
     }
     console.log(tmp); // 123
 }
-Block scoping means that you can shadow variables within a function:
+//Block scoping means that you can shadow variables within a function:
 
 function func() {
   const foo = 5;
